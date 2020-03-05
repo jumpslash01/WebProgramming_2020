@@ -1,5 +1,7 @@
 html,body {
-    margin: 50px;
+    margin-left: 50px;
+    margin-right:50px;
+    margin-top: 0px;
     font-family: 'Spartan', sans-serif;
 }
 
@@ -18,7 +20,6 @@ html,body {
 .center {
     background-color:white;
     padding: 50px;
-
 }
 
 h1 {margin: 0px;
@@ -40,13 +41,11 @@ h1 {margin: 0px;
     text-align: center;
 }
 
-.button {
-    
+.button { 
     padding: 10px;
     font-family: 'Spartan', sans-serif;
     font-size: 9px;
     background-color: #8eba3e;
     color: white;
-    border-radius: 8px;
- 
+    border-radius: 9px;
 }
