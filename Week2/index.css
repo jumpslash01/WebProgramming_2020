@@ -1,26 +1,52 @@
 html,body {
-    margin: 0;
+    margin: 50px;
     font-family: 'Spartan', sans-serif;
 }
 
 .header {
-    background-color: green;
+    background-color: #8eba3e;
     font-family: 'Spartan', sans-serif;
     text-align: center;
-    padding: 100px;
+    padding: 50px;
+}
+
+.header h1{
+    color: white;
+    font-size: 3em;
 }
 
 .center {
-    background-color: grey;
-
-    padding: 0px;
+    background-color:white;
+    padding: 50px;
 
 }
 
-.header h1 {
+h1 {margin: 0px;
 }
 
 .footer {
-    background-color: red;
-    padding: 0px;
+    background-color:#efefef;
+    text-align: center;
+    padding: 100px;
+}
+.ftext{
+    font-size: 15px;
+    color: #888888;
+}
+.alt 
+{color: #8eba3e;}
+
+.buttonbox{
+    text-align: center;
+}
+
+.button {
+    
+    padding: 10px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 9px;
+    background-color: #8eba3e;
+    color: white;
+    border-radius: 8px;
+ 
 }
