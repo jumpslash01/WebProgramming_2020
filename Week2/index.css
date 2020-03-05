@@ -1,0 +1,26 @@
+html,body {
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+.header {
+    background-color: green;
+    font-family: 'Spartan', sans-serif;
+    text-align: center;
+    padding: 100px;
+}
+
+.center {
+    background-color: grey;
+
+    padding: 0px;
+
+}
+
+.header h1 {
+}
+
+.footer {
+    background-color: red;
+    padding: 0px;
+}
