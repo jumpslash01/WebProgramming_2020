@@ -1,0 +1,57 @@
+body { 
+    background-color: #433B4F;
+    text-align: center;
+    margin: 0px;
+}
+.heading {
+    text-align: center;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+.heading h1 {
+    font-weight: normal;
+    margin: 0px;
+    font-size: 40px;
+}
+
+.main_image{
+background-color: rgb(221, 83, 180);
+height: 175px;
+width: 60%;
+margin-top: 40px;
+margin-left:20% ;
+margin-right:20%;
+}
+
+.intro_box{
+height: 140px;
+background-color: white;
+width: 60%;
+margin-left:20%;
+margin-right:20%;
+}
+
+.main_date{
+padding: 10px 10px 13px 15px;
+text-align: left;
+
+}
+.title h1{
+margin:0px;
+}
+
+.read_more{
+text-align:;
+background-color: grey;
+height: 110px;
+width: 60%;
+margin-left:20%;
+margin-right:20%;
+}
+
+.plus {
+    background-color: red;
+    height: 110px; 
+    width: 110px;
+    float:right;
+}
