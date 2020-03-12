@@ -30,7 +30,6 @@ input  {
     border: 0px;
     padding-left: 20px;
     font-size: medium;
-
 }
 
 ::placeholder {
@@ -50,11 +49,9 @@ input  {
 
 .bottom_text {
     margin: 25px;
-    color: grey;
+    color: rgb(167, 167, 167);
 }
 a{
     text-decoration: none;
-
-    color: #00B241;
-
+    color: #68be4c;
 }
