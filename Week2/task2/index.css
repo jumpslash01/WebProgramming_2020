@@ -34,7 +34,7 @@ input  {
 
 ::placeholder {
     font-family: 'Inter', sans-serif;
-    color: grey;
+    color: rgb(167, 167, 167);
 
 }
 .button 
