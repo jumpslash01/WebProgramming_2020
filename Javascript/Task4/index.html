@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input id="myinput" type="text" value="1"><br> <br>
+        <div>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; +</div><br>
+        <input id="myinput2" type="text" value="2">
+        <button id="myButton">Click me please</button><br><br><br>
+        <div id="result">0</div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+
+        let button = document.getElementById("myButton");
+        let input1 = document.getElementById("myinput");
+        let input2 = document.getElementById("myinput2");
+        let result = document.getElementById("result");
+
+        button.onclick = function () {
+
+            let value1 = parseInt(input1.value);
+            let value2 = parseInt(input2.value);
+
+            result.innerHTML = (value1 + value2);
+        }
+
+    </script>
+</body>
+
+</html>

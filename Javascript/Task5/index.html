@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="value1">
+    <select id="options">
+        <option value="plus">+</option>
+        <option value="minus">-</option>
+        <option value="division">/</option>
+    </select>
+    <input id="value2"><br>
+    <button id="button">Click me please</button>
+    <div id="result">0</div>
+
+    <script>
+        let options = document.getElementById("options");
+        let button = document.getElementById("button");
+
+        let getvalue1 = parseInt(document.getElementById("value1").value);
+        let getvalue2 = parseInt(document.getElementById("value2").value);
+
+        let result = document.getElementById("result");
+
+
+        button.onclick = dabutton;
+
+        function dabutton() {
+
+            let getvalue1 = parseInt(document.getElementById("value1").value);
+            let getvalue2 = parseInt(document.getElementById("value2").value);
+
+            if (options.value == "plus") {
+                result.innerHTML = (getvalue1 + getvalue2);
+            }
+
+
+            else if (options.value == "minus") {
+                result.innerHTML = (getvalue1 - getvalue2);
+            }
+
+            else {
+                result.innerHTML = (getvalue1 / getvalue2);
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
