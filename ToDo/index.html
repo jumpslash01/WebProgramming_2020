@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input" placeholder="New item...">
+    <button id="Add">Add</button><br>
+    <button id="Remove">Remove</button><br>
+
+
+    <ul id="list" style="list-style-type:none;">
+
+        <script>
+            let input = document.getElementById("input");
+            let AddButton = document.getElementById("Add");
+            let RemoveButton = document.getElementById("Remove");
+
+            let list = document.getElementById("list");
+
+            let ArrayList = [];
+            console.log(ArrayList);
+
+
+            //Additions!
+
+            AddButton.onclick = dabutton;
+
+            function dabutton() {
+                let getvalue1 = (document.getElementById("input").value);
+
+                let myNewElement = document.createElement("li");
+
+                let myNewElementButton = document.createElement("button");
+
+                myNewElementButton.innerHTML = "x";
+                myNewElement.innerHTML = getvalue1;
+
+                myNewElement.appendChild(document.createTextNode(" "));
+                myNewElement.appendChild(myNewElementButton);
+                list.appendChild(myNewElement);
+                ArrayList.push(myNewElement);
+                console.log(ArrayList);
+
+                input.value = "";
+
+                myNewElementButton.onclick = function () {
+                    list.removeChild(myNewElement);
+
+                    ArrayList.splice(ArrayList.indexOf(myNewElement), 1);
+                    console.log(ArrayList);
+
+                }
+
+                RemoveButton.onclick = function () {
+                    ArrayList.forEach(function (element) {
+                        list.removeChild(element);
+                    })
+                    ArrayList.splice(0, ArrayList.length);
+                    console.log(ArrayList);
+                }
+
+            }
+        </script>
+
+
+
+
+
+</body>
+
+</html>
