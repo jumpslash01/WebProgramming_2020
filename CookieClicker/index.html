@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body {
+            background-color: aquamarine;
+            padding: 0px;
+            margin-top: 20px;
+        }
+
+        #cookie {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .counter {
+            text-align: center;
+        }
+
+        #button,
+        #button2,
+        #button3,
+        #button4 {
+            text-align: center;
+        }
+
+        #costs {
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0px;
+        }
+
+        .logs {
+            float: right;        }
+    </style>
+</head>
+
+
+
+
+
+
+
+<body>
+    <div id="cookie">
+        <img src="cookie.png" alt="cookie">
+    </div>
+    <div class="counter">
+        <h1 id="count">1</h1>
+    </div>
+    <div id="button">
+        <button>CLICK UPGRADE</button>
+    </div>
+    <div id="button2">
+        <button>AUTO UPGRADE</button>
+    </div>
+    <div id="button3">
+        <button>BUY_ADDI UPGRADE</button>
+    </div>
+    <div id="button4">
+        <button>SUPER MULTIPLIER</button>
+    </div>
+
+    <div id="costs">
+        <h1 id="click_cost">CLICK COST = 10</h1>
+        <h1 id="auto_cost">AUTO COST = 50</h1>
+        <h1 id="buy_addi_cost">BUY_ADDI COST = 1K</h1>
+        <h1 id="multi_cost">SUPER MULTIPLIER COST = 100K</h1>
+
+    </div>
+
+    <div class = "logs">
+        <h1 id ="TOTAL_CLICKS">TOTAL CLICKS = 0</h1> 
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+        let count = document.getElementById("count");
+        let cookies = document.getElementById("cookie");
+
+        let button = document.getElementById("button");
+        let button2 = document.getElementById("button2");
+        let button3 = document.getElementById("button3");
+
+        let amount = 0;
+        let click_power = 1;
+        let auto_power = 0;
+        let buy_power = 1;
+        let buy_power_base = 1;
+        let total_clicks = 0;
+        let click_cost = document.getElementById("click_cost");
+        let auto_cost = document.getElementById("auto_cost");
+        let buy_addi_cost = document.getElementById("buy_addi_cost");
+        let total_clicks_text = document.getElementById("TOTAL_CLICKS");
+
+
+        count.innerHTML = amount;
+
+        cookies.onclick = function () {
+            amount = (amount + click_power);
+            count.innerHTML = amount;
+            total_clicks++;
+            total_clicks_text.innerHTML = "TOTAL CLICKS = " + total_clicks;
+        }
+
+        button.onclick = function () {
+            if (amount >= (10 * buy_power)) {
+                click_power = click_power + buy_power;
+                amount = amount - (10 * buy_power);
+                count.innerHTML = amount;
+            }
+        }
+
+        button2.onclick = function () {
+            if (amount >= (50 * buy_power)) {
+                auto_power = auto_power + buy_power;
+                amount = amount - (50 * buy_power);
+                count.innerHTML = amount;
+
+            }
+        }
+
+        button3.onclick = function () {
+            if (amount >= 1000) {
+                buy_power++;
+                amount = amount - 1000;
+                count.innerHTML = amount;
+                click_cost.innerHTML = "CLICK COST = " + (10 * buy_power);
+                auto_cost.innerHTML = "AUTO COST = " + (50 * buy_power);
+            }
+        }
+
+        button4.onclick = function () {
+            if (amount >= 100000) {
+
+                amount = amount - 100000;
+                count.innerHTML = amount;
+
+                buy_power = buy_power * 50;
+                auto_power = auto_power * 50;
+                click_power = click_power * 50;
+                click_cost.innerHTML = "CLICK COST = " + (10 * buy_power);
+                auto_cost.innerHTML = "AUTO COST = " + (50 * buy_power);
+                buy_addi_cost.innerHTML = "BUY_ADDI COST = " + (buy_power_base * 50) + "K";
+            }
+
+
+        }
+
+
+        setInterval(function () {
+            amount = amount + auto_power;
+            count.innerHTML = amount;
+        }, 300);
+
+
+    </script>
+
+
+</body>
+
+</html>
